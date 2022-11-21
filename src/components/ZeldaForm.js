@@ -16,7 +16,7 @@ const ZeldaForm = (props) => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/lists', {
+        axios.post('https://the-master-list-api.onrender.com/api/lists', {
             username,    
             firstGame,
             secondGame,

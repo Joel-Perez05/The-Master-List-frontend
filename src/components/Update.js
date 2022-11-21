@@ -18,7 +18,7 @@ const Update = (props) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/lists/' + id)
+        axios.get('https://the-master-list-api.onrender.com/api/lists/' + id)
             .then(res => {
                 console.log(res.data)
                 setUsername(res.data.username);
@@ -33,7 +33,7 @@ const Update = (props) => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        axios.put('http://localhost:8000/api/lists/' + id, {
+        axios.put('https://the-master-list-api.onrender.com/api/lists/' + id, {
             username,    
             firstGame,
             secondGame,

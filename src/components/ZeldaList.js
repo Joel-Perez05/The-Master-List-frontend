@@ -15,7 +15,7 @@ const ZeldaList = (props) => {
         socket.on("connection", () => {
             console.log("connected");
         })
-        axios.get("http://localhost:8000/api/lists")
+        axios.get("https://the-master-list-api.onrender.com/api/lists")
         .then((res)=>{
             console.log(res.data);
             setUserLists(res.data);
