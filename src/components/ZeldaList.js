@@ -9,7 +9,7 @@ import background from "../images/triforce.jpg";
 
 const ZeldaList = (props) => {
     const [userLists, setUserLists] = useState([]);
-    const [socket] = useState(() => io(":8000"));
+    const [socket] = useState(() => io("https://the-master-list-api.onrender.com"));
 
     useEffect(()=>{
         socket.on("connection", () => {
