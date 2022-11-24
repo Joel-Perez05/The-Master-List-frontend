@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {HashRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Header from "./components/Header";
 import ZeldaForm from "./components/ZeldaForm";
 import ZeldaHome from "./components/ZeldaHome";
@@ -15,7 +15,7 @@ function App() {
   const darkMode = theme.state.darkMode;
 
   return (
-    <HashRouter>
+    <BrowserRouter>
     <div style={{height: "1655px"}} className={`bg ${darkMode ? "bg-dark" : "bg-light"}`}>
       <Header />
       <ThemeButton />
@@ -27,7 +27,7 @@ function App() {
         <Route element={<Detail />} path="game/details/:id" />
       </Routes>
     </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
